@@ -32,7 +32,67 @@ export const ResturantsList = [
     img:
       "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     raiting: "4.9",
-  },
+    menuList: [
+      {
+        id: 1,
+        title: "Salads",
+        price: 50,
+        name: "Virgina",
+        img: "https://freepngimg.com/thumb/salad/36611-2-salad.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+      {
+        id: 2,
+        title: "Salads",
+        name: "Virgina",
+        price: 45,
+        img:
+          "https://freepngimg.com/thumb/salad/36667-1-salad-with-apple-and-bleu-cheese.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+      {
+        id: 3,
+        title: "Salads",
+        price: 55,
+        name: "Virgina",
+        img:
+          "https://freepngimg.com/thumb/salad/36651-7-vegetable-salad-thumb.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+      {
+        id: 4,
+        title: "Salads",
+        price: 50,
+        name: "Virgina",
+        img:
+          "https://freepngimg.com/thumb/salad/34916-3-grilled-chicken-caesar-salad-thumb.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+      {
+        id: 5,
+        title: "Salads",
+        price: 20,
+        name: "Virgina",
+        img:
+          "https://freepngimg.com/thumb/salad/23630-4-salad-transparent-thumb.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+      {
+        id: 6,
+        title: "Salads",
+        price: 50,
+        name: "Virgina",
+        img: "https://freepngimg.com/thumb/salad/23763-2-salad-image-thumb.png",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+    ],
+  }, //
   {
     id: 1,
     title: "Vero Vero",
@@ -42,7 +102,18 @@ export const ResturantsList = [
     img:
       "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     raiting: "5.0",
-  },
+    menuList: [
+      {
+        id: 0,
+        title: "Salads",
+        name: "Virgina",
+        img:
+          "https://img1.pnghut.com/23/6/21/mzrdkqWZtW/health-food-crudit-c3-a9s-garnish-side-dish-dip.jpg",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+    ],
+  }, //
   {
     id: 2,
     title: "Milk Bar",
@@ -52,7 +123,18 @@ export const ResturantsList = [
     img:
       "https://images.pexels.com/photos/7184372/pexels-photo-7184372.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     raiting: "4.0",
-  },
+    menuList: [
+      {
+        id: 0,
+        title: "Salads",
+        name: "Virgina",
+        img:
+          "https://img1.pnghut.com/23/6/21/mzrdkqWZtW/health-food-crudit-c3-a9s-garnish-side-dish-dip.jpg",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+    ],
+  }, //
   {
     id: 3,
     title: "go healthy",
@@ -63,7 +145,18 @@ export const ResturantsList = [
     img:
       "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     raiting: "4.5",
-  },
+    menuList: [
+      {
+        id: 0,
+        title: "Salads",
+        name: "Virgina",
+        img:
+          "https://img1.pnghut.com/23/6/21/mzrdkqWZtW/health-food-crudit-c3-a9s-garnish-side-dish-dip.jpg",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+    ],
+  }, //
   {
     id: 4,
     title: "Drink Master",
@@ -73,5 +166,16 @@ export const ResturantsList = [
     img:
       "https://images.pexels.com/photos/7133606/pexels-photo-7133606.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     raiting: "5.0",
+    menuList: [
+      {
+        id: 0,
+        title: "Salads",
+        name: "Virgina",
+        img:
+          "https://img1.pnghut.com/23/6/21/mzrdkqWZtW/health-food-crudit-c3-a9s-garnish-side-dish-dip.jpg",
+        description:
+          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+      },
+    ],
   },
 ];

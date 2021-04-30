@@ -1,12 +1,17 @@
 import React, { useLayoutEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import { theme } from "../../Theme/index";
 import { ResturantsList } from "../../Constants/DummyData";
 import { ProfileLeft } from "../../Components/NavgationHeader";
+
+import MenuCard from "../../Components/MenuCard";
 const Menu = ({ navigation, route }) => {
   const ResturantID = route.params.resturants_ID;
   const CurrentResturant = ResturantsList.find((item) => {
     return item.id === ResturantID;
+  });
+  const menuCatigory = CurrentResturant.menuList.find((item) => {
+    return item.name;
   });
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -27,12 +32,34 @@ const Menu = ({ navigation, route }) => {
     });
   }, []);
   return (
-    <View>
-      <Text></Text>
+    <View style={styles.container}>
+      <View style={styles.titleCont}>
+        <Text style={styles.title}>{menuCatigory.title}</Text>
+      </View>
+      <FlatList
+        data={CurrentResturant.menuList}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => {
+          return <MenuCard item={item} />;
+        }}
+      />
     </View>
   );
 };
 
 export default Menu;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: { flex: 1, paddingHorizontal: 10 },
+  titleCont: {
+    height: "10%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: theme.fontSizes.title,
+    fontFamily: theme.fonts.main,
+    fontWeight: theme.fontWeight.bold,
+    color: theme.colors.dark,
+  },
+});
