@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View, Dimensions, Image } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import { colors, fontSizes } from "../../Constants/Them";
+import { colors } from "../../Theme/colors ";
+import { fontSizes } from "../../Theme/font";
 const AppCarousel = ({ OnboardingList, setindex, test }) => {
   return (
     <Carousel
+      scrollEnabled={false}
       data={OnboardingList}
       ref={test}
       keyExtractor={(item) => item.title.toString()}

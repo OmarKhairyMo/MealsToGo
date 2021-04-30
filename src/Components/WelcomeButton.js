@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { fontSizes } from "../Constants/Them";
+import { fontSizes } from "../Theme/font";
 import { OnboardingList } from "../Constants/DummyData";
 const WelcomeButton = ({ title, onPress, bgColor, fontColor, index }) => {
-  console.log(index);
   return (
     <TouchableOpacity style={styles(bgColor).button} onPress={onPress}>
       {index === OnboardingList.length - 1 ? (
@@ -28,7 +27,7 @@ const styles = (bgColor) =>
       marginVertical: 5,
     },
     font: {
-      fontSize: fontSizes.standared,
+      fontSize: fontSizes.button,
       fontWeight: "400",
     },
   });

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, StatusBar, SafeAreaView } from "react-native";
 
 const Screen = ({ children, style }) => {
-  return <View style={[styles.screen, style]}>{children}</View>;
+  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
 };
 
 export default Screen;

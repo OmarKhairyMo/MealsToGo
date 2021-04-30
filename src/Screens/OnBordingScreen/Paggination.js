@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Pagination } from "react-native-snap-carousel";
-import { colors } from "../../Constants/Them";
+import { colors } from "../../Theme/colors ";
 const Paggination = ({ data, activeIndex }) => {
   return (
     <Pagination

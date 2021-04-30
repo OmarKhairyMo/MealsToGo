@@ -3,14 +3,20 @@ import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
 import Screen from "../../Components/Screen";
 import WelcomeButton from "../../Components/WelcomeButton";
 import { OnboardingList } from "../../Constants/DummyData";
-import { colors } from "../../Constants/Them";
+import { colors } from "../../Theme/colors ";
 import AppCarousel from "./AppCarousel";
 import Paggination from "./Paggination";
-const OnBoarding = () => {
+const OnBoarding = ({ navigation }) => {
   const [index, setindex] = useState(0);
   const test = useRef(null);
+  const handelPress = () => {
+    if (index !== OnboardingList.length - 1) test.current.snapToNext();
+    else {
+      navigation.navigate("Home");
+    }
+  };
   return (
-    <Screen style={styles.container}>
+    <View style={styles.container}>
       <AppCarousel
         setindex={setindex}
         OnboardingList={OnboardingList}
@@ -24,7 +30,7 @@ const OnBoarding = () => {
           fontColor={colors.white}
           index={index}
           onPress={() => {
-            test.current.snapToNext();
+            handelPress();
           }}
         />
         {index !== OnboardingList.length - 1 && (
@@ -32,10 +38,13 @@ const OnBoarding = () => {
             bgColor={"transparent"}
             title={"Skip"}
             fontColor={colors.primary}
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
           />
         )}
       </View>
-    </Screen>
+    </View>
   );
 };
 
