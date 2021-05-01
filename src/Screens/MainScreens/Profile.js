@@ -83,5 +83,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.title,
     fontWeight: theme.fontWeight.bold,
     fontFamily: theme.fonts.main,
+    position: "absolute",
+    top: 20,
   },
 });

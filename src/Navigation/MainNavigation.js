@@ -7,14 +7,14 @@ import Detailes from "../Screens/MainScreens/Detailes";
 import OnBoarding from "../Screens/OnBordingScreen/OnBoarding";
 import {
   LeftButton,
-  ProfileLeft,
+  BackButton,
   ProfileRight,
   RightHeader,
 } from "../Components/NavgationHeader";
 import Profile from "../Screens/MainScreens/Profile";
 import { colors } from "../Theme/colors ";
 
-import { Feather, AntDesign } from "@expo/vector-icons";
+import { Feather, AntDesign, Ionicons } from "@expo/vector-icons";
 import MapScreen from "../Screens/MainScreens/MapScreen";
 import Menu from "../Screens/MainScreens/Menu";
 import { theme } from "../Theme";
@@ -28,14 +28,12 @@ const ProfileStackNavigator = () => {
     <ProfileStack.Navigator
       screenOptions={{
         headerTransparent: true,
+        headerTitleAlign: "center",
         title: "My Profile",
         headerTintColor: colors.white,
         headerTitleStyle: { letterSpacing: 1, fontSize: 20 },
         headerRight: () => {
           return <ProfileRight />;
-        },
-        headerLeft: () => {
-          return <ProfileLeft />;
         },
       }}
     >
@@ -68,6 +66,8 @@ const HomeStackNavigator = () => {
         name="Home"
         component={Home}
         options={{
+          title: "",
+          headerTitleAlign: "center",
           headerLeft: () => {
             return <LeftButton />;
           },
@@ -107,7 +107,7 @@ const MainNavigation = () => {
           component={HomeStackNavigator}
           options={{
             tabBarIcon: ({ color, size }) => {
-              return <Feather name="home" size={size} color={color} />;
+              return <Ionicons name="home-outline" size={size} color={color} />;
             },
           }}
         />
@@ -136,7 +136,7 @@ const MainNavigation = () => {
           component={ProfileStackNavigator}
           options={{
             tabBarIcon: ({ color, size }) => {
-              return <Feather name="user" size={size} color={color} />;
+              return <AntDesign name="user" size={size} color={color} />;
             },
           }}
         />

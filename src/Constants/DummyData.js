@@ -40,23 +40,26 @@ export const ResturantsList = [
         name: "Virgina",
         img: "https://freepngimg.com/thumb/salad/36611-2-salad.png",
         description:
-          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+          "Mix salad with eggs,bread crunches,tomatos,cheese,mustard and lemon sauce",
+        Item_raiting: 4,
       },
       {
         id: 2,
         title: "Salads",
         name: "Virgina",
         price: 45,
+        Item_raiting: 5,
         img:
           "https://freepngimg.com/thumb/salad/36667-1-salad-with-apple-and-bleu-cheese.png",
         description:
-          "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",
+          "Mix salad with eggs,bread crunches,tomatos,cheese,mustard and lemon sauce",
       },
       {
         id: 3,
         title: "Salads",
         price: 55,
         name: "Virgina",
+        Item_raiting: 3,
         img:
           "https://freepngimg.com/thumb/salad/36651-7-vegetable-salad-thumb.png",
         description:
@@ -67,6 +70,7 @@ export const ResturantsList = [
         title: "Salads",
         price: 50,
         name: "Virgina",
+        Item_raiting: 2,
         img:
           "https://freepngimg.com/thumb/salad/34916-3-grilled-chicken-caesar-salad-thumb.png",
         description:
@@ -77,6 +81,7 @@ export const ResturantsList = [
         title: "Salads",
         price: 20,
         name: "Virgina",
+        Item_raiting: 1,
         img:
           "https://freepngimg.com/thumb/salad/23630-4-salad-transparent-thumb.png",
         description:
@@ -87,6 +92,7 @@ export const ResturantsList = [
         title: "Salads",
         price: 50,
         name: "Virgina",
+        Item_raiting: 5,
         img: "https://freepngimg.com/thumb/salad/23763-2-salad-image-thumb.png",
         description:
           "Mix salad with eggs , bread crunches,tomatos,cheese,mustard and lemon sauce",

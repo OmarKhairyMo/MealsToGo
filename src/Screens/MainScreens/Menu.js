@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { theme } from "../../Theme/index";
 import { ResturantsList } from "../../Constants/DummyData";
-import { ProfileLeft } from "../../Components/NavgationHeader";
+import { BackButton } from "../../Components/NavgationHeader";
 
 import MenuCard from "../../Components/MenuCard";
 const Menu = ({ navigation, route }) => {
@@ -16,6 +16,7 @@ const Menu = ({ navigation, route }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       title: CurrentResturant.title,
+      headerTitleAlign: "center",
       headerTitleStyle: {
         color: theme.colors.white,
         fontFamily: theme.fonts.main,
@@ -27,7 +28,7 @@ const Menu = ({ navigation, route }) => {
         backgroundColor: theme.colors.primary,
       },
       headerLeft: () => {
-        return <ProfileLeft onPress={() => navigation.pop()} />;
+        return <BackButton />;
       },
     });
   }, []);
@@ -40,7 +41,17 @@ const Menu = ({ navigation, route }) => {
         data={CurrentResturant.menuList}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => {
-          return <MenuCard item={item} />;
+          return (
+            <MenuCard
+              item={item}
+              onPress={() => {
+                navigation.navigate("Detailes", {
+                  itemId: item.id,
+                  myList: CurrentResturant.menuList,
+                });
+              }}
+            />
+          );
         }}
       />
     </View>

@@ -26,5 +26,6 @@ const styles = (size) =>
       fontSize: theme.fontSizes.button,
       fontWeight: theme.fontWeight.medium,
       color: theme.colors.white,
+      shadowOpacity: 0.1,
     },
   });

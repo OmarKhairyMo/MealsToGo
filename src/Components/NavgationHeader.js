@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { AntDesign, Entypo } from "@expo/vector-icons";
 import { colors } from "../Theme/colors ";
 import { theme } from "../Theme";
@@ -35,10 +36,14 @@ export const RightHeader = () => {
   );
 };
 
-export const ProfileLeft = ({ onPress }) => {
+export const BackButton = ({ onPress, color = colors.white }) => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={{ paddingLeft: 10 }} onPress={onPress}>
-      <AntDesign name="left" size={24} color={colors.white} />
+    <TouchableOpacity
+      style={{ paddingLeft: 10 }}
+      onPress={() => navigation.pop()}
+    >
+      <AntDesign name="left" size={24} color={color} />
     </TouchableOpacity>
   );
 };

@@ -13,7 +13,7 @@ const Home = ({ navigation }) => {
     return null;
   }
   return (
-    <Screen style={styles.container}>
+    <View style={styles.container}>
       <View style={{ flex: 1, paddingHorizontal: 10 }}>
         <FlatList
           data={ResturantsList}
@@ -30,13 +30,13 @@ const Home = ({ navigation }) => {
           }}
         />
       </View>
-    </Screen>
+    </View>
   );
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
-  container: { backgroundColor: "white" },
+  container: { backgroundColor: "white", flex: 1 },
   test: { textTransform: "capitalize", letterSpacing: 1 },
 });

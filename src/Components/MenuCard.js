@@ -1,35 +1,48 @@
 import React from "react";
-import { StyleSheet, Text, View, Dimensions, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  Platform,
+} from "react-native";
 import { theme } from "../Theme/index";
 import AddButton from "../Components/AddToCart_Button";
 import QuantatyButton from "../Components/QuantatyButton";
 import { AntDesign } from "@expo/vector-icons";
-const MenuCard = ({ item }) => {
+const MenuCard = ({ item, onPress }) => {
   return (
-    <View style={styles.listCard}>
-      <View style={styles.imgCont}>
-        <Image style={styles.img} source={{ uri: item.img }} />
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.itemName}>{item.name}</Text>
-        <Text style={styles.description}>{item.description}</Text>
-        <Text style={styles.price}>{item.price} EGP</Text>
-        <View style={styles.buttonsCont}>
-          <QuantatyButton
-            color={theme.colors.white}
-            sign={
-              <AntDesign name="minus" size={14} color={theme.colors.dark} />
-            }
-          />
-          <Text style={{ marginHorizontal: 10 }}>1</Text>
-          <QuantatyButton
-            color={theme.colors.white}
-            sign={<AntDesign name="plus" size={14} color={theme.colors.dark} />}
-          />
-          <AddButton size={100} style={styles.addButton} />
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.listCard}>
+        <View style={styles.imgCont}>
+          <Image style={styles.img} source={{ uri: item.img }} />
+        </View>
+        <View style={styles.body}>
+          <Text style={styles.itemName}>{item.name}</Text>
+          <Text style={styles.description}>{item.description}</Text>
+          <Text style={styles.price}>{item.price} EGP</Text>
+          <View style={styles.buttonsCont}>
+            <QuantatyButton
+              color={theme.colors.white}
+              sign={
+                <AntDesign name="minus" size={14} color={theme.colors.dark} />
+              }
+            />
+            <Text style={{ marginHorizontal: 10 }}>1</Text>
+            <QuantatyButton
+              color={theme.colors.white}
+              sign={
+                <AntDesign name="plus" size={14} color={theme.colors.dark} />
+              }
+            />
+            <AddButton size={100} style={styles.addButton} />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -38,7 +51,7 @@ export default MenuCard;
 const styles = StyleSheet.create({
   listCard: {
     flexDirection: "row",
-    height: Dimensions.get("window").height / 4.5,
+    height: Dimensions.get("window").height / 4,
     backgroundColor: theme.colors.secondary,
     borderRadius: 10,
     marginBottom: 10,
@@ -64,7 +77,8 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.caption,
     fontWeight: theme.fontWeight.bold,
     color: theme.colors.dark,
+    paddingBottom: 5,
   },
   buttonsCont: { flex: 1, alignItems: "center", flexDirection: "row" },
-  addButton: { marginLeft: 15 },
+  addButton: { marginLeft: Platform.OS === "android" ? 10 : 15 },
 });
